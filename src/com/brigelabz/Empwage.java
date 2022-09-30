@@ -1,26 +1,28 @@
 package com.brigelabz;
 
 public class Empwage {
-    public static void EmployeepresentAbsent() {
-        double var1 = Math.random();
-        System.out.println(var1);
-        double var = Math.floor(var1 * 10);
-        System.out.println(var);
-        int employeeAttendence = (int) var % 2;
-        System.out.println(employeeAttendence);
-        if (employeeAttendence == 1) {
-            System.out.println("Employee is present");
-        } else {
-            System.out.println("Employee is Abesent");
-        }
+    public static void main(String[] args) {
+        int IS_FULL_TIME = 1;
+        int Employee_wage_per_Hour = 20;
+        int empHrs = 0;
+        int empwage = 0;
+        double empcheck = Math.floor(Math.random() * 10) % 2;
+        if (empcheck == IS_FULL_TIME)
+            empHrs = 8;
+        else
+            empHrs = 0;
 
-    }
 
-    public static void main(String[] arg) {
-        EmployeepresentAbsent();
-
+        empwage = empHrs * Employee_wage_per_Hour;
+        System.out.println("empwage: " + empwage);
     }
 }
+
+
+
+
+
+
 
 
 
